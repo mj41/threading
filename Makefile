@@ -9,6 +9,9 @@ BENCHMARKS=subroutine direct indirect switch call repl-switch
 bench-time: $(BENCHMARKS)
 	for i in $(BENCHMARKS); do echo -n $$i; $(TIME) ./$$i; done
 
+bench-perf: $(BENCHMARKS)
+	for i in $(BENCHMARKS); do perf stat -B ./$$i 2>&1; done
+
 all: $(BENCHMARKS)
 	bench-time
 
