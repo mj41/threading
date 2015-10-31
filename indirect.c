@@ -7,7 +7,7 @@ main()
   static void  *cf[] = {&&next1,&&next2,&&next3,&&next4,&&next5,&&loop};
   static void **prog[] = {cf, cf+1, cf, cf+2, cf, cf+3, cf, cf+4, cf, cf+5};
   void ***ip=prog;
-  int    count = 10000000;
+  int    count = 100000000;
   NEXT;
  next1:
   guard(1);

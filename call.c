@@ -33,7 +33,7 @@ void next5()
 
 void loop()
 {
-  static int count=10000000;
+  static int count=100000000;
 
   if (count<=0)
     exit(0);

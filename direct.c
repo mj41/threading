@@ -6,7 +6,7 @@ main()
   /* this has 50% mispredictions (50-60% is typical in large benchmarks) */
   static void  *prog[] = {&&next1,&&next2,&&next1,&&next3,&&next1,&&next4,&&next1,&&next5,&&next1,&&loop};
   void **ip=prog;
-  int    count = 10000000;
+  int    count = 100000000;
   NEXT;
  next1:
   guard(1);
