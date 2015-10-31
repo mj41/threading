@@ -6,8 +6,11 @@ TIME=time
 
 BENCHMARKS=subroutine direct indirect switch call repl-switch
 
-all: $(BENCHMARKS)
+bench-time: $(BENCHMARKS)
 	for i in $(BENCHMARKS); do echo -n $$i; $(TIME) ./$$i; done
+
+all: $(BENCHMARKS)
+	bench-time
 
 table: $(BENCHMARKS)
 	@echo 'subrout direct indirect switch    call  repl-sw'
